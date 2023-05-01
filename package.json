@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/brosmar18/can-of-books-backend/issues"
   },
-  "homepage": "https://github.com/brosmar18/can-of-books-backend#readme"
+  "homepage": "https://github.com/brosmar18/can-of-books-backend#readme",
+  "dependencies": {
+    "mongodb": "^5.3.0"
+  }
 }
