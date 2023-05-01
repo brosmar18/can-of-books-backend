@@ -1,0 +1,19 @@
+{
+  "name": "can-of-books-backend",
+  "version": "1.0.0",
+  "description": "Week 3 Lab",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brosmar18/can-of-books-backend.git"
+  },
+  "author": "Bryan Garduno Gonzalez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brosmar18/can-of-books-backend/issues"
+  },
+  "homepage": "https://github.com/brosmar18/can-of-books-backend#readme"
+}
