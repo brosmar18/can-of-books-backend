@@ -1,32 +1,38 @@
 'use strict';
 require('dotenv').config();
 const mongoose = require('mongoose');
-const Book = require('./models/book');
-async function seed() {
+const BookModel = require('./models/book');
+
+async function runSeed() {
     await mongoose.connect(
         process.env.DB_URL
     )
-        .then(() => console.log('Mongo DB is connected!'))
+        .then(() => console.log('MongoDB connected successfully!'))
         .catch(e => console.log(e));
-    await Book.create([{
+
+    await BookModel.create([{
         title: 'Watchmen',
-        description: 'Who watches who?',
+        description: 'A tale of superheroes and vigilantes.',
         status: true
     }]);
-    console.log('Book 1!!')
-    await Book.create([{
+    console.log('Book 1 added!')
+
+    await BookModel.create([{
         title: '20,000 Leagues Under The Sea',
-        description: 'Who watches who?',
+        description: 'A journey to the depths of the ocean.',
         status: true
     }]);
-    console.log('Book 2!!')
-    await Book.create([{
+    console.log('Book 2 added!')
+
+    await BookModel.create([{
         title: '1984',
-        description: 'Who watches who?',
+        description: 'A dystopian novel about surveillance and control.',
         status: true
     }]);
-    console.log('Book 3!!')
-    console.log('Closing the DB connection for our seed file');
+    console.log('Book 3 added!')
+
+    console.log('Closing the DB connection for the seed file');
     mongoose.disconnect();
 }
-seed();
+
+runSeed();
